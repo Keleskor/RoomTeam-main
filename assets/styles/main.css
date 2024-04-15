@@ -489,6 +489,7 @@ background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
     position: relative;
+    border-radius: 32px;
 }
 .best-destinations__image {
     width: 100%;
@@ -506,9 +507,16 @@ background-color: var(--primary-color);
     background: #FFFFFF33;
     height: 90px;
     padding: 20px;
+    transition: var(--transitionTime);
     align-items: center;
     backdrop-filter: blur(2px);
+    border-radius: 0 0 32px 32px;
     gap: 10px;
+}
+.best-destinations__destination:hover .best-destinations__information{
+    height: 100%;
+    backdrop-filter: blur(12px);
+    border-radius: 32px
 }
 .best-destinations__under-information__heading {
     color: #FDFDFD;
