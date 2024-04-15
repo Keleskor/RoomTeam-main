@@ -1,0 +1,26 @@
+:root,
+:host {
+    --vs-search-input-bg: rgba(255, 255, 255, 0);
+    --vs-border-color: white;
+    --vs-border-width: 1px;
+    --vs-border-style: solid;
+    --vs-border-radius: 4px;
+
+
+
+    --vs-dropdown-bg: #ffffff;
+    --vs-dropdown-color: inherit;
+    --vs-dropdown-z-index: 1000;
+    --vs-dropdown-min-width: 160px;
+    --vs-dropdown-max-height: 350px;
+    --vs-dropdown-box-shadow: 0px 3px 6px 0px var(--vs-colors--darkest);
+    --vs-dropdown-option-color: var(--primary-color);
+    --vs-dropdown-option--active-bg:var(--primary-color);
+
+    --vs-controls-color:white;
+
+    --vs-selected-color:white;
+}
+.vs__dropdown-toggle{
+    padding: 10px 5px!important;
+}
