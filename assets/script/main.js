@@ -23,6 +23,7 @@ const app = createApp({
       ],
       currentPosition:0,
       dialogFormVisible:false,
+      isRendered:false,
       currentWidth:document.documentElement.clientWidth,
     }
   },
@@ -42,7 +43,9 @@ const app = createApp({
   mounted() {
     document.addEventListener('scroll',()=>this.currentPosition = document.documentElement.scrollTop);
     window.addEventListener('resize',()=>this.currentWidth = document.documentElement.clientWidth);
+    isRendered = true;
   },
+
 })
 app.config.warnHandler = () => null;
 app.use(ElementPlus).mount('#app')
