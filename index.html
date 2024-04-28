@@ -17,54 +17,56 @@
 
 <body>
     <div id="app">
-        <header class="main-header" :class="{active:currentPosition>=250}">
+        <header class="main-header" :class="{active:currentPosition>=50}">
             <div class="container main-header__container">
-                <a href="index.html" class="main-header__img-link">
-                    <img src="assets/images/logo.png" alt="" class="main-header__img">
-                </a>
-                <nav class="main-header__nav">
-                    <ul class="main-header__list">
-                        <li class="main-header__item">
-                            <a href="" class="main-header__link">
-                                Главная
-                            </a>
-                        </li>
-                        <li class="main-header__item">
-                            <a href="" class="main-header__link">
-                                Про гида
-                            </a>
-                        </li>
-                        <li class="main-header__item">
-                            <a href="" class="main-header__link">
-                                Программа тура
-                            </a>
-                        </li>
-                        <li class="main-header__item">
-                            <a href="" class="main-header__link">
-                                Стоимость
-                            </a>
-                        </li>
-                        <li class="main-header__item">
-                            <a href="" class="main-header__link">
-                                Блог
-                            </a>
-                        </li>
-                        <li class="main-header__item">
-                            <a href="" class="main-header__link">
-                                Контакты
-                            </a>
-                        </li>
-                    </ul>
-                </nav>
-                <button class="main-header__btn" :class="{'primary-btn':!isHeaderDowned, 'secondary-btn':isHeaderDowned}">
-                    Консультация
-                </button>
+                <div class="main-header__content">
+                    <a href="index.html" class="main-header__img-link">
+                        <img src="assets/images/logo.png" alt="" class="main-header__img">
+                    </a>
+                    <nav class="main-header__nav">
+                        <ul class="main-header__list">
+                            <li class="main-header__item">
+                                <a href="" class="main-header__link">
+                                    Главная
+                                </a>
+                            </li>
+                            <li class="main-header__item">
+                                <a href="" class="main-header__link">
+                                    Про гида
+                                </a>
+                            </li>
+                            <li class="main-header__item">
+                                <a href="" class="main-header__link">
+                                    Программа тура
+                                </a>
+                            </li>
+                            <li class="main-header__item">
+                                <a href="" class="main-header__link">
+                                    Стоимость
+                                </a>
+                            </li>
+                            <li class="main-header__item">
+                                <a href="" class="main-header__link">
+                                    Блог
+                                </a>
+                            </li>
+                            <li class="main-header__item">
+                                <a href="" class="main-header__link">
+                                    Контакты
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <button class="main-header__btn" :class="{'primary-btn':!isHeaderDowned, 'secondary-btn':isHeaderDowned}">
+                        Консультация
+                    </button>
+                </div>
             </div>
         </header>
         <section id="introduction">
             <div class="introduction__video-wrapper">
                 <video src="assets/video/vecteezy_yellow-mountain-or-huangshan-mountain-china_2021671.mp4"
-                    class="introduction__video" autoplay muted loop></video>
+                    class="introduction__video" autoplay loop muted></video>
                 <div class="container introduction__container">
                     <div class="introduction__content">
                         <h1 class="introduction__text">
@@ -104,7 +106,7 @@
                         <img src="assets/images/background-image-section2.jpg" alt="" class="about-hike__back-image">
                     </div>
                     <div class="about-hike__video__wrapper">
-                        <video src="assets/video/175357-853206077_small.mp4" autoplay loop class="about-hike__video" ></video>
+                        <video src="assets/video/175357-853206077_small.mp4" autoplay loop muted class="about-hike__video" ></video>
                     </div>
                 </div>
                 <div class="about-hike__information">
@@ -214,55 +216,85 @@
                     <div class="best-destinations__destination">
                         <img src="assets/images/39504f3a781b84f1a32907d478fae892.jpg" alt="" class="best-destinations__image">
                         <div class="best-destinations__information">
-                            <div class="best-destinations__under-information">
-                                <h5 class="best-destinations__under-information__heading">
-                                    Озеро возле гор
-                                </h5>
-                                <h6 class="best-destinations__under-information__subheading">
-                                    романтическое приключение
-                                </h6>
+                            <div class="best-destinations__wrapper-under-information">
+                                <div class="best-destinations__under-information">
+                                    <h5 class="best-destinations__under-information__heading">
+                                        Озеро возле гор
+                                    </h5>
+                                    <h6 class="best-destinations__under-information__subheading">
+                                        романтическое приключение
+                                    </h6>
+                                </div>
+                                <span class="best-destinations__wrapper-price">
+                                    <h5 class="best-destinations__price">
+                                        480 $
+                                    </h5>
+                                </span>
                             </div>
-                            <span class="best-destinations__wrapper-price">
-                                <h5 class="best-destinations__price">
-                                    480 $
-                                </h5>
-                            </span>
+                            <div class="best-destinations__additional-information">
+                                <p class="best-destinations__text">
+                                    Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
+                                </p>
+                                <button class="best-destinations__additional-information-button">
+                                    Программа тура
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="best-destinations__destination">
                         <img src="assets/images/b9d7452802df43f445a596a19742322c.jpg" alt="" class="best-destinations__image">
                         <div class="best-destinations__information">
-                            <div class="best-destinations__under-information">
-                                <h5 class="best-destinations__under-information__heading">
-                                    Ночь в горах
-                                </h5>
-                                <h6 class="best-destinations__under-information__subheading">
-                                    В компании друзей
-                                </h6>
+                            <div class="best-destinations__wrapper-under-information">
+                                <div class="best-destinations__under-information">
+                                    <h5 class="best-destinations__under-information__heading">
+                                        Ночь в горах
+                                    </h5>
+                                    <h6 class="best-destinations__under-information__subheading">
+                                        в компании друзей
+                                    </h6>
+                                </div>
+                                <span class="best-destinations__wrapper-price">
+                                    <h5 class="best-destinations__price">
+                                        500 $
+                                    </h5>
+                                </span>
                             </div>
-                            <span class="best-destinations__wrapper-price">
-                                <h5 class="best-destinations__price">
-                                    500 $
-                                </h5>
-                            </span>
+                            <div class="best-destinations__additional-information">
+                                <p class="best-destinations__text">
+                                    Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
+                                </p>
+                                <button class="best-destinations__additional-information-button">
+                                    Программа тура
+                                </button>
+                            </div>
                         </div>
                     </div>
                     <div class="best-destinations__destination">
                         <img src="assets/images/d78d17f8ab62b1d6fcdd562a3ada64e7.jpg" alt="" class="best-destinations__image">
                         <div class="best-destinations__information">
-                            <div class="best-destinations__under-information">
-                                <h5 class="best-destinations__under-information__heading">
-                                    Йога в горах
-                                </h5>
-                                <h6 class="best-destinations__under-information__subheading">
-                                    для тех, кто заботится о себе
-                                </h6>
+                            <div class="best-destinations__wrapper-under-information">
+                                <div class="best-destinations__under-information">
+                                    <h5 class="best-destinations__under-information__heading">
+                                        Йога в горах
+                                    </h5>
+                                    <h6 class="best-destinations__under-information__subheading">
+                                        для тех, кто заботится о себе
+                                    </h6>
+                                </div>
+                                <span class="best-destinations__wrapper-price">
+                                    <h5 class="best-destinations__price">
+                                        230 $
+                                    </h5>
+                                </span>
                             </div>
-                            <span class="best-destinations__wrapper-price">
-                                <h5 class="best-destinations__price">
-                                    230 $
-                                </h5>
-                            </span>
+                            <div class="best-destinations__additional-information">
+                                <p class="best-destinations__text">
+                                    Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
+                                </p>
+                                <button class="best-destinations__additional-information-button">
+                                    Программа тура
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -305,9 +337,37 @@
                         </div>
                     </div>
                 </div>
+                <button class="photo-report__button">
+                    Наш pinterest
+                </button>
             </div>
         </section>
         <footer class="footer">
+            <section class="newsletter">
+                <div class="newsletter__content">
+                    <div class="newsletter__container">
+                        <div class="newsletter__information">
+                            <h5 class="newsletter__heading">
+                                актуально
+                            </h5>
+                            <h3 class="newsletter__subheading">
+                                Получайте полезные <br> рассылки о путешествиях
+                            </h3>
+                        </div>
+                        <div class="newsletter__wrapper-form">
+                            <form action="" class="newsletter__form">
+                                <input type="email" class="newsletter__email" placeholder="name@domain.com">
+                                <button class="newsletter__button">
+                                    Подписаться на новости
+                                </button>
+                            </form>
+                            <p class="newsletter__agreement">
+                                подписываясь на новости, вы автоматически соглашаетесь с <a href="" class="newsletter__link-agreement"> условиями <br> обработки персональных данных </a> и <a href="" class="newsletter__link-agreement"> правилами рекламных рассылок </a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
             <div class="footer__content">
                 <div class="footer__wrapper-information">
                     <div class="footer__information">
@@ -444,6 +504,16 @@
                             </a>
                         </li>
                     </ul>
+                </div>
+                <div class="footer__author">
+                    <div class="footer__auntor-content">
+                        <h5 class="footer__author-name">
+                            Веб-разработчик
+                        </h5>
+                        <a href="" class="footer__data-processing">
+                            Политика обработки персональных данных
+                        </a>
+                    </div>
                 </div>
             </div>
         </footer>
