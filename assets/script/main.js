@@ -25,7 +25,7 @@ const app = createApp({
   },
   computed:{
     isHeaderDowned(){
-      return this.currentPosition>=250;
+      return this.currentPosition>=50;
     }
   },
   mounted() {
@@ -34,4 +34,3 @@ const app = createApp({
 })
 app.config.warnHandler = () => null;
 app.mount('#app')
-
