@@ -9,6 +9,15 @@
     font-family: Nunito;
     font-weight: 400;
 }
+
+.vs__clear  {
+    display: none;
+}
+.vs__selected-options {
+    padding: 0px!important;
+    white-space: nowrap;
+}
+
 :root{
     --primary-color:#1A3E3E;
     --primary-colorTransperent: #1a3e3e63;
@@ -38,7 +47,13 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{
 }
 /* Container END */
 
-
+.main-header__content {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
 
 /* Main-header START */
 .main-header{
@@ -52,24 +67,13 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{
     transition: calc(var(--transitionTime) - 0.1s);
 }
 
-.main-header.active{
+.main-header.active {
 background-color: var(--primary-color);
-}
-
-
-.main-header__btn{
-    margin-left: 50px;
-}
-.main-header__nav{
-    margin-left: auto;
 }
 .main-header__list{
     display: flex;
     gap: 24px;
     align-items: center;
-}
-.main-header__img-link {
-    margin: 0 50px 0 0;
 }
 .main-header__link{
     font-size: 18px;
@@ -210,7 +214,9 @@ background-color: var(--primary-color);
 }
 /* primary-btn END */
 
-
+.vs__dropdown-toggle, .introduction__btn {
+    height: 52px;
+}
 
 /* secondary-btn START */
 .secondary-btn{
@@ -498,25 +504,62 @@ background-color: var(--primary-color);
     border-radius: 32px;
 }
 .best-destinations__information {
+    display: grid;
+    grid-template-rows: 90px 0px;
     position: absolute;
     bottom: 0;
     left: 0;
-    display: flex;
     width: 100%;
-    justify-content: space-around;
     background: #FFFFFF33;
     height: 90px;
     padding: 20px;
     transition: var(--transitionTime);
-    align-items: center;
     backdrop-filter: blur(2px);
     border-radius: 0 0 32px 32px;
     gap: 10px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.best-destinations__wrapper-under-information {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
 }
 .best-destinations__destination:hover .best-destinations__information{
     height: 100%;
     backdrop-filter: blur(12px);
-    border-radius: 32px
+    border-radius: 32px;
+    grid-template-rows: 100px auto;
+}
+.best-destinations__additional-information{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.best-destinations__text{
+    max-width: 316px;
+    max-height: 100%;
+    font-family: Nunito;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FDFDFD;
+}
+.best-destinations__additional-information-button {
+    background-color: var(--primary-color);
+    color: white;
+    width: 176px;
+    height: 44px;
+    font-family: Nunito;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: var(--transitionTime);
+}
+.best-destinations__additional-information-button:hover {
+    color: var(--primary-color);
+    background-color: white;
+    border: 1px  solid var(--primary-color);
+    transition: var(--transitionTime);
 }
 .best-destinations__under-information__heading {
     color: #FDFDFD;
@@ -534,7 +577,11 @@ background-color: var(--primary-color);
 }
 .best-destinations__wrapper-price {
     background-color: #FFFFFF4D;
-    padding: 8px 16px 8px 16px;
+    width: 86px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border-radius: 4px;
 }
 .best-destinations__price {
@@ -567,7 +614,7 @@ background-color: var(--primary-color);
 /* SECTION photo-report START */
 
 .photo-report {
-    padding: 100px 0;
+    padding-bottom: 200px;
 }
 .photo-report__content {
     max-width: calc(1200px + 20vw);
@@ -617,11 +664,121 @@ background-color: var(--primary-color);
     object-fit: cover;
     border-radius: 6px;
 }
+.photo-report__button {
+    background-color: var(--primary-color);
+    padding: 16px 36px 16px 36px;
+    color: white;
+    border-radius: 4px;
+    font-size: 16px;
+    font-family: Nunito;
+    font-weight: 600;
+    cursor: pointer;
+    border: 1px solid var(--primary-color);
+    transition: var(--transitionTime);
+}
+.photo-report__button:hover {
+    background-color: white;
+    color: var(--primary-color);
+    transition: var(--transitionTime);
+}
 /* SECTION photo-report END */
+
+/* SECTION newsletter START */
+
+.newsletter {
+    padding-bottom: 100px;
+}
+.newsletter__content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+    max-width: calc(1200px + 20vw);
+    width: 100%;
+    padding: 0 10vw;
+    margin: 0 auto;
+}
+.newsletter__container {
+    padding: 40px 20px 40px 20px;
+    display: flex;
+    justify-content: space-around;
+    box-shadow: 0px 0px 15px 0px #18121E1F;
+    border-radius: 6px;
+    background-color: #FDFDFD;
+    align-items: center;
+    gap: 20px;
+}
+.newsletter__information {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.newsletter__heading {
+    font-size: 18px;
+    color: #F2BE22;
+    font-family: Nunito;
+    font-weight: 400;
+}
+.newsletter__wrapper-form {
+    display: flex;
+    gap: 8px;
+    flex-direction: column;
+}
+.newsletter__form {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+.newsletter__email {
+    width: 280px;
+    height: 44px;
+    background-color: #F3F5F4;
+    padding: 0px 16px 0px 16px;
+    color: black;
+    font-family: Nunito;
+    font-weight: lighter;
+    font-size: 14px;
+    border-radius: 4px;
+}
+.newsletter__button {
+    background-color: var(--primary-color);
+    padding: 12px 24px 12px 24px;
+    border: 1px solid var(--primary-color);
+    color: white;
+    font-size: 16px;
+    font-family: Nunito;
+    font-weight: 600;
+    border-radius: 4px;
+    transition: var(--transitionTime);
+    cursor: pointer;
+}
+.newsletter__button:hover {
+    color: var(--primary-color);
+    background-color: white;
+    border: 1px solid var(--primary-color);
+    transition: var(--transitionTime);
+}
+.newsletter__agreement, .newsletter__link-agreement {
+    font-size: 14px;
+    font-family: Nunito;
+    font-weight: 600;
+    color: black;
+    transition: var(--transitionTime);
+}
+.newsletter__link-agreement:hover {
+    color: #F2BE22;
+    transition: var(--transitionTime);
+}
+.newsletter__link-agreement {
+    text-decoration: underline;
+}
+/* SECTION newsletter END */
 
 /* SECTION footer START */
 
 .footer {
+    position: relative;
     padding: 100px 0;
     background-color: #1A3E3E;
 }
@@ -632,6 +789,11 @@ background-color: var(--primary-color);
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+}
+.newsletter__subheading {
+    font-family: Nunito;
+    font-weight: 800;
+    font-size: 26px;
 }
 .footer__wrapper-information {
     display: flex;
@@ -729,5 +891,120 @@ background-color: var(--primary-color);
     color: #F2BE22;
     text-decoration: underline;
 }
+.footer__author {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 66px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+}
+.footer__auntor-content {
+    max-width: calc(1200px + 20vw);
+    width: 100%;
+    padding: 0 10vw;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.footer__author-name {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Nunito;
+}
+.footer__data-processing {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: Nunito;
+    text-decoration: underline;
+    transition: var(--transitionTime);
+}
+.footer__data-processing:hover {
+    color: #F2BE22;
+    transition: var(--transitionTime);
+}
+
 /* SECTION footer END */
 
+/* media query 1366px START */
+
+
+@media(max-width:1365px){
+    .vs__selected, .vs__search, .introduction__btn {
+        font-size: 14px;
+    }
+    .introduction__item span {
+        font-size: 14px;
+    }
+    .main-header__link {
+        font-size: 14px;
+    }
+    .main-header__btn, .about-hike__button, .best-programs__button, .best-destinations__button, .photo-report__button, .newsletter__button {
+        font-size: 14px;
+    }
+    .introduction__text {
+        font-size: 42px;
+    }
+    .vs__dropdown-menu {
+        overflow: hidden;
+    }
+    .introduction__block {
+        flex-wrap: wrap;
+        justify-content: end;
+    }
+    .introduction__item {
+        flex-direction: column-reverse;
+    }
+    .about-hike__heading, .best-programs__heading, .best-destinations__heading, .photo-report__heading {
+        font-size: 20px;
+    }
+    .about-hike__subheading, .best-programs__subheading, .best-destinations__subheading, .photo-report__subheading {
+        font-size: 28px;
+    }
+    .about-hike__description, .best-programs__description {
+        font-size: 16px;
+    }
+    .best-programs__advantage-name {
+        font-size: 16px;
+    }
+    .about-hike__information, .best-programs__information {
+        gap: 25px;
+    }
+    .best-programs__content {
+        flex-direction: column;
+    }
+    .best-programs__content {
+        align-items: normal;
+    }
+    .best-programs__photos {
+        gap: 20px;
+    }
+    .newsletter__agreement, .newsletter__link-agreement {
+        font-size: 12px;
+    }
+    .best-programs__photo__wrapper {
+        max-width: 100%;
+        max-height: 100%;
+    }
+    .best-destinations__destination:nth-of-type(3){
+        display: none;
+    }
+    .newsletter__button {
+        padding: 10px 18px 10px 18px;
+    }
+    .newsletter__email {
+        max-width: 280px;
+    }
+    .footer__heading, .footer__services-list__heading, .footer__traveling-list__heading {
+        font-size: 18px;
+    }
+    .footer__content {
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: start;
+    }
+}
