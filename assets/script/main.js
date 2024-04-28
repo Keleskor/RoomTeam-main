@@ -28,9 +28,6 @@ const app = createApp({
     }
   },
   methods: {
-    handleChange(value){
-      console.log(value)
-    },
   },
   computed:{
     isHeaderDowned(){
