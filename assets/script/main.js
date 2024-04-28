@@ -23,7 +23,7 @@ const app = createApp({
       ],
       currentPosition:0,
       dialogFormVisible:false,
-      isRendered:false,
+      rendered:false,
       currentWidth:document.documentElement.clientWidth,
     }
   },
@@ -38,12 +38,15 @@ const app = createApp({
     },
     isTabletWidth(){
       return this.currentWidth<=1024;
+    },
+    isRendered(){
+      return this.rendered;
     }
   },
   mounted() {
     document.addEventListener('scroll',()=>this.currentPosition = document.documentElement.scrollTop);
     window.addEventListener('resize',()=>this.currentWidth = document.documentElement.clientWidth);
-    isRendered = true;
+    rendered = true;
   },
 
 })
