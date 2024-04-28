@@ -1,10 +1,11 @@
 const { createApp } = Vue
 const app = createApp({
   components:{
-    vSelect: window["vue-select"]
+    vSelect: window["vue-select"],
   },
   data() {
     return {
+      SelectedDate:null,
       tours: [
         { title: "Закопане (Польша)" },
         { title: "Дурмитор (Черногория)" },
@@ -21,16 +22,27 @@ const app = createApp({
         { title: "12-14" }
       ],
       currentPosition:0,
+      dialogFormVisible:false,
+      currentWidth:document.documentElement.clientWidth,
     }
+  },
+  methods: {
+    handleChange(value){
+      console.log(value)
+    },
   },
   computed:{
     isHeaderDowned(){
       return this.currentPosition>=50;
+    },
+    isTabletWidth(){
+      return this.currentWidth<=1024;
     }
   },
   mounted() {
     document.addEventListener('scroll',()=>this.currentPosition = document.documentElement.scrollTop);
+    window.addEventListener('resize',()=>this.currentWidth = document.documentElement.clientWidth);
   },
 })
 app.config.warnHandler = () => null;
-app.mount('#app')
+app.use(ElementPlus).mount('#app')

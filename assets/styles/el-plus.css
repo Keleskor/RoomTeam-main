@@ -1,0 +1,14 @@
+.el-date-editor{
+    --el-date-editor-width:100%;
+    --el-input-height:52px;
+}
+
+.el-date-editor.introduction__date-picker {
+    --el-input-bg-color:transperent;
+    --el-input-text-color:white;
+    --el-text-color-regular:white;
+    --el-input-icon-color:white;
+    --el-text-color-placeholder:white;
+    --el-input-focus-border-color:white;
+    --el-input-hover-border-color:white;
+}

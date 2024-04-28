@@ -7,56 +7,96 @@
     <link rel="stylesheet" href="assets/styles/fonts.css">
     <link rel="stylesheet" href="assets/styles/main.css">
     <link rel="stylesheet" href="https://unpkg.com/vue-select@latest/dist/vue-select.css">
-    <link rel="stylesheet" href="assets/styles/select.css">
-    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+    <link
+    rel="stylesheet"
+    href="//cdn.jsdelivr.net/npm/element-plus/dist/index.css"
+  />
+  
+    <script src="//cdn.jsdelivr.net/npm/vue@3"></script>
+    <script src="//cdn.jsdelivr.net/npm/element-plus"></script>
     <script src="https://unpkg.com/vue-select@4.0.0-beta.6/dist/vue-select.umd.js"></script>
     <script src="assets/script/main.js" defer></script>
+    <link rel="stylesheet" href="assets/styles/select.css">
+    <link rel="stylesheet" href="assets/styles/el-plus.css">
     <link rel="shortcut icon" href="assets/images/logo.png" type="image/x-icon">
     <title>РумТим</title>
 </head>
 
 <body>
     <div id="app">
-        <header class="main-header" :class="{active:currentPosition>=50}">
+        <el-dialog v-model="dialogFormVisible" title="Поиск программы" width="500">
+            <li class="introduction__item">
+                <v-select :options="tours" label="title" placeholder="Локация для тура"></v-select>
+                <span>
+                    Выберите из списка
+                </span>
+            </li>
+            <li class="introduction__item">
+                <div>
+                    <el-date-picker
+                    v-model="SelectedDate"
+                    type="date"
+                    placeholder="Укажите дату"
+                    class="introduction__date-picker"
+                    />
+                </div>
+                <span>
+                    Укажите дату
+                </span>
+            </li>
+            <li class="introduction__item">
+                <v-select :options="participants" label="title" placeholder="Участники"></v-select>
+                <span>
+                    Минимум 4 человека
+                </span>
+            </li>
+            <button class="primary-btn">
+                Найти
+            </button>
+        </el-dialog>
+        <header class="main-header" ref="header" :class="{active:currentPosition>=50}">
             <div class="container main-header__container">
                 <div class="main-header__content">
                     <a href="index.html" class="main-header__img-link">
                         <img src="assets/images/logo.png" alt="" class="main-header__img">
                     </a>
-                    <nav class="main-header__nav">
-                        <ul class="main-header__list">
-                            <li class="main-header__item">
-                                <a href="" class="main-header__link">
-                                    Главная
-                                </a>
-                            </li>
-                            <li class="main-header__item">
-                                <a href="" class="main-header__link">
-                                    Про гида
-                                </a>
-                            </li>
-                            <li class="main-header__item">
-                                <a href="" class="main-header__link">
-                                    Программа тура
-                                </a>
-                            </li>
-                            <li class="main-header__item">
-                                <a href="" class="main-header__link">
-                                    Стоимость
-                                </a>
-                            </li>
-                            <li class="main-header__item">
-                                <a href="" class="main-header__link">
-                                    Блог
-                                </a>
-                            </li>
-                            <li class="main-header__item">
-                                <a href="" class="main-header__link">
-                                    Контакты
-                                </a>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="main-header__block">
+                        <nav class="main-header__nav">
+                            <ul class="main-header__list">
+                                <li class="main-header__item">
+                                    <a href="" class="main-header__link">
+                                        Главная
+                                    </a>
+                                </li>
+                                <li class="main-header__item">
+                                    <a href="" class="main-header__link">
+                                        Про гида
+                                    </a>
+                                </li>
+                                <li class="main-header__item">
+                                    <a href="" class="main-header__link">
+                                        Программа тура
+                                    </a>
+                                </li>
+                                <li class="main-header__item">
+                                    <a href="" class="main-header__link">
+                                        Стоимость
+                                    </a>
+                                </li>
+                                <li class="main-header__item">
+                                    <a href="" class="main-header__link">
+                                        Блог
+                                    </a>
+                                </li>
+                                <li class="main-header__item">
+                                    <a href="" class="main-header__link">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
                     <button class="main-header__btn" :class="{'primary-btn':!isHeaderDowned, 'secondary-btn':isHeaderDowned}">
                         Консультация
                     </button>
@@ -66,7 +106,7 @@
         <section id="introduction">
             <div class="introduction__video-wrapper">
                 <video src="assets/video/vecteezy_yellow-mountain-or-huangshan-mountain-china_2021671.mp4"
-                    class="introduction__video" autoplay loop muted></video>
+                    class="introduction__video" :autoplay="!isTabletWidth" loop muted></video>
                 <div class="container introduction__container">
                     <div class="introduction__content">
                         <h1 class="introduction__text">
@@ -81,7 +121,14 @@
                                     </span>
                                 </li>
                                 <li class="introduction__item">
-                                    <v-select :options="data" label="title" placeholder="Дата похода"></v-select>
+                                    <div>
+                                        <el-date-picker
+                                        v-model="SelectedDate"
+                                        type="date"
+                                        placeholder="Укажите дату"
+                                        class="introduction__date-picker"
+                                        />
+                                    </div>
                                     <span>
                                         Укажите дату
                                     </span>
@@ -93,7 +140,7 @@
                                     </span>
                                 </li>
                             </ul>
-                            <button class="introduction__btn secondary-btn  ">Найти программу</button>
+                            <button class="introduction__btn secondary-btn" @click="dialogFormVisible=true">Найти программу</button>
                         </div>
                     </div>
                 </div>
@@ -106,7 +153,7 @@
                         <img src="assets/images/background-image-section2.jpg" alt="" class="about-hike__back-image">
                     </div>
                     <div class="about-hike__video__wrapper">
-                        <video src="assets/video/175357-853206077_small.mp4" autoplay loop muted class="about-hike__video" ></video>
+                        <video src="assets/video/175357-853206077_small.mp4" :autoplay="!isTabletWidth" loop muted class="about-hike__video" ></video>
                     </div>
                 </div>
                 <div class="about-hike__information">
