@@ -9,7 +9,21 @@
     font-family: Nunito;
     font-weight: 400;
 }
-
+.overflow {
+    overflow: hidden;
+}
+.block {
+    display: none;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2007;
+}
+.block__active {
+    display: flex;
+}
 .vs__clear  {
     display: none;
 }
@@ -60,7 +74,7 @@ html::-webkit-scrollbar,body::-webkit-scrollbar{
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2008;
+    z-index: 2009;
 
     width: 100%;
 
@@ -107,10 +121,24 @@ background-color: var(--primary-color);
     display: flex;
     align-items: center;
 }
+.button__burger-menu {
+    display: none;
+}
+.main-header__item__close {
+    display: none;
+}
+.main-header__item__icon {
+    display: none;
+}
 /* Main-header END */
 
 
 /* SECTION introduction START */
+
+.introduction {
+    position: relative;
+    z-index: 2006;
+}
 .introduction__video-wrapper{
     width: 100%;
     height: 915px;
@@ -155,14 +183,18 @@ background-color: var(--primary-color);
     z-index: 3;
     color: white;
 }
+.introduction__content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
 .introduction__text{
     font-size: 50px;
     font-family: NextArt;
     font-weight: bold;
-    margin-bottom: 40px;
 }
 
-.introduction__block{
+.introduction__block {
     background-color: var(--whiteTransperent);
     backdrop-filter: blur(6px);
     border-radius: 10px;
@@ -170,6 +202,16 @@ background-color: var(--primary-color);
     display: flex;
     align-items: flex-start;
     gap: 24px;
+    position: relative;
+    z-index: 2009;
+}
+.introduction__block__close {
+    display: none;
+}
+.introduction__block__close__acitve {
+    display: block;
+    z-index: 646464654654;
+    position: relative;
 }
 .introduction__list{
     display: flex;
@@ -245,6 +287,25 @@ background-color: var(--primary-color);
     background-color: var(--whiteActive);
 }
 /* secondary-btn END */
+.button__program-menu {
+    display: none;
+    flex:  0 0 auto;
+
+    border-radius: 4px;
+    background-color: transparent;
+    padding: 12px 24px;
+
+
+    border: 2px solid white;
+
+    cursor: pointer;
+    font-size: 16px;
+    color: white;
+
+    transition:var(--transitionTime);
+    width: 172px;
+    white-space: nowrap;
+}
 
 /* SECTION about-hike START */
 
@@ -419,13 +480,20 @@ background-color: var(--primary-color);
     transition:var(--transitionTime);
     border: 1px solid var(--primary-color);
 }
-.best-programs__photos {
-    max-width: 100%;
-    display: grid;
-    gap: 10px;
-    grid-template-columns: repeat(2,1fr);
+.swiper {
+    margin-left: 0!important;
+    margin-right: 0!important;
 }
-.best-programs__photo__wrapper {
+.swiper-wrapper {
+    max-width: 100%!important;
+    display: grid!important;
+    gap: 10px;
+    grid-template-columns: repeat(2,1fr)!important;
+}
+.swiper-button-next, .swiper-button-prev {
+    display: none!important;
+}
+.swiper-slide {
     max-width: 250px;
     max-height: 250px;
     object-fit: cover;
@@ -436,16 +504,16 @@ background-color: var(--primary-color);
     object-fit: cover;
     aspect-ratio: 1/1;
 }
-.best-programs__photo__wrapper:nth-of-type(1) .best-programs__photo{
+.swiper-slide:nth-of-type(1) .best-programs__photo{
     border-radius: 0px 50px 0px 50px;
 }
-.best-programs__photo__wrapper:nth-of-type(2) .best-programs__photo{
+.swiper-slide:nth-of-type(2) .best-programs__photo{
     border-radius: 50px 0px 50px 0px;
 }
-.best-programs__photo__wrapper:nth-of-type(3) .best-programs__photo{
+.swiper-slide:nth-of-type(3) .best-programs__photo{
     border-radius: 50px 0px 50px 0px;
 }
-.best-programs__photo__wrapper:nth-of-type(4) .best-programs__photo{
+.swiper-slide:nth-of-type(4) .best-programs__photo{
     border-radius: 0px 50px 0px 50px;
 }
 
@@ -980,13 +1048,13 @@ background-color: var(--primary-color);
     .best-programs__content {
         align-items: normal;
     }
-    .best-programs__photos {
+    .swiper-wrapper {
         gap: 20px;
     }
     .newsletter__agreement, .newsletter__link-agreement {
         font-size: 12px;
     }
-    .best-programs__photo__wrapper {
+    .swiper-slide {
         max-width: 100%;
         max-height: 100%;
     }
@@ -1006,5 +1074,109 @@ background-color: var(--primary-color);
         flex-wrap: wrap;
         gap: 20px;
         justify-content: start;
+    }
+}
+@media(max-width:1023px){
+    .button__burger-menu {
+        display: block;
+    }
+    .main-header__btn {
+        display: none;
+    }
+    .main-header__block {
+        position: absolute;
+        right: 0;
+        top: 0;
+        transform: translateX(300px);
+        transition: var(--transitionTime);
+    }
+    .main-header__block__acitve {
+        transform: translateX(0px);
+        transition: var(--transitionTime);
+    }
+    .main-header__nav {
+        position: relative;
+        padding: 30px 50px;
+        background-color: var(--primary-color);
+    }
+    .main-header__list {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+    }
+    .main-header__item__icon {
+        display: block;
+    }
+    .main-header__item {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .main-header__item__close {
+        display: block;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    .button__program-menu {
+        display: flex;
+    }
+    .introduction__block {
+        display: none;
+        background-color: var(--primary-color);
+    }
+    .introduction__block__active {
+        display: flex;
+        z-index: 2008;
+    }
+    .introduction__list {
+        flex-direction: column;
+    }
+    .container, .about-hike__content, .best-programs__content, .best-destinations__content, .photo-report__content, .footer__content {
+        padding: 0 5vw;
+    }
+    .about-hike__content {
+        flex-direction: column-reverse;
+        align-items: start;
+    }
+    .about-hike__back-image__wrapper {
+        display: none;
+    }
+    .about-hike__video-demonstration {
+        width: 100%;
+        height: 100%;
+    }
+    .about-hike__video__wrapper {
+        position: static;
+        max-width: 100%;
+        height: 100%;
+    }
+    .introduction__block__close {
+        display: block;
+    }
+    .newsletter__content {
+        background-color: white;
+    }
+    .newsletter__content {
+        padding: 0 5vw 50px 5vw;
+    }
+    .swiper-wrapper {
+        width: 100%;
+        height: 100%;
+    }
+}
+@media(max-width:767px){
+    .swiper {
+        display: block;
+        width: 100%!important;
+        overflow: hidden!important;
+    }
+    .swiper-wrapper {
+        display: flex!important;
+        flex-direction: row!important;
+    }
+    .best-programs__photo {
+        border-radius: 50px!important;
+        overflow: hidden!important;
     }
 }

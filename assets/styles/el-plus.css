@@ -12,3 +12,6 @@
     --el-input-focus-border-color:white;
     --el-input-hover-border-color:white;
 }
+.el-popper{
+    z-index: 2010!important;
+}
