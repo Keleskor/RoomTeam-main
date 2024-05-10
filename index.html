@@ -12,7 +12,10 @@
     rel="stylesheet"
     href="//cdn.jsdelivr.net/npm/element-plus/dist/index.css"
   />
-  
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <script src="//cdn.jsdelivr.net/npm/vue@3"></script>
     <script src="//cdn.jsdelivr.net/npm/element-plus"></script>
     <script src="https://unpkg.com/vue-select@4.0.0-beta.6/dist/vue-select.umd.js"></script>
@@ -24,6 +27,7 @@
 </head>
 
 <body>
+    <div class="block"></div>
     <div id="app">
         <header class="main-header" ref="header" :class="{active:currentPosition>=50}">
             <div class="container main-header__container">
@@ -31,35 +35,64 @@
                     <a href="index.html" class="main-header__img-link">
                         <img src="assets/images/logo.png" alt="" class="main-header__img">
                     </a>
-                    <div class="main-header__block">
+                    <div class="main-header__block">                         
                         <nav class="main-header__nav">
+                            <span class="main-header__item__close">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="main-header__item__close-icon">
+                                    <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="white"/>
+                                </svg>  
+                            </span> 
                             <ul class="main-header__list">
                                 <li class="main-header__item">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" class="main-header__item__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD">
+                                        </path>
+                                    </svg>
                                     <a href="" class="main-header__link">
                                         Главная
                                     </a>
                                 </li>
                                 <li class="main-header__item">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" class="main-header__item__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD">
+                                        </path>
+                                    </svg>
                                     <a href="" class="main-header__link">
                                         Про гида
                                     </a>
                                 </li>
                                 <li class="main-header__item">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" class="main-header__item__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD">
+                                        </path>
+                                    </svg>
                                     <a href="" class="main-header__link">
                                         Программа тура
                                     </a>
                                 </li>
                                 <li class="main-header__item">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" class="main-header__item__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD">
+                                        </path>
+                                    </svg>
                                     <a href="" class="main-header__link">
                                         Стоимость
                                     </a>
                                 </li>
                                 <li class="main-header__item">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" class="main-header__item__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD">
+                                        </path>
+                                    </svg>
                                     <a href="" class="main-header__link">
                                         Блог
                                     </a>
                                 </li>
                                 <li class="main-header__item">
+                                    <svg width="6" height="10" viewBox="0 0 6 10" class="main-header__item__icon" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.7154 4.6098L1.26527 0.159755C1.16235 0.0567475 1.02495 0 0.878448 0C0.731945 0 0.594548 0.0567475 0.491622 0.159755L0.163901 0.487394C-0.0493491 0.700889 -0.0493491 1.04788 0.163901 1.26105L3.90078 4.99793L0.159755 8.73895C0.0568288 8.84196 0 8.97928 0 9.1257C0 9.27228 0.0568288 9.4096 0.159755 9.51269L0.487476 9.84024C0.590483 9.94325 0.727799 10 0.874302 10C1.0208 10 1.1582 9.94325 1.26113 9.84024L5.7154 5.38613C5.81857 5.2828 5.87524 5.14484 5.87491 4.99817C5.87524 4.85094 5.81857 4.71305 5.7154 4.6098Z" fill="#FDFDFD">
+                                        </path>
+                                    </svg>
                                     <a href="" class="main-header__link">
                                         Контакты
                                     </a>
@@ -70,10 +103,13 @@
                     <button class="main-header__btn" :class="{'primary-btn':!isHeaderDowned, 'secondary-btn':isHeaderDowned}">
                         Консультация
                     </button>
+                    <span class="button__burger-menu">
+                        <img src="assets/images/Vector.png" alt="" class="logo__burger-menu">
+                    </span>
                 </div>
             </div>
         </header>
-        <section id="introduction">
+        <section id="introduction" class="introduction">
             <div class="introduction__video-wrapper">
                 <video src="assets/video/vecteezy_yellow-mountain-or-huangshan-mountain-china_2021671.mp4"
                     class="introduction__video" :autoplay="!isTabletWidth" loop muted></video>
@@ -83,6 +119,11 @@
                             Насладись прогулкой в горах с командой единомышленников
                         </h1>
                         <div class="introduction__block">
+                            <span class="introduction__block__close">
+                                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg" class="introduction__block__close-icon">
+                                    <path d="M1.4 14L0 12.6L5.6 7L0 1.4L1.4 0L7 5.6L12.6 0L14 1.4L8.4 7L14 12.6L12.6 14L7 8.4L1.4 14Z" fill="white"/>
+                                </svg>                                    
+                            </span>
                             <ul class="introduction__list">
                                 <li class="introduction__item">
                                     <v-select :options="tours" label="title" placeholder="Локация для тура"></v-select>
@@ -112,6 +153,9 @@
                             </ul>
                             <button class="introduction__btn secondary-btn" @click="dialogFormVisible=true">Найти программу</button>
                         </div>
+                        <button class="button__program-menu">
+                            Меню программ
+                        </button>
                     </div>
                 </div>
             </div>
@@ -123,7 +167,7 @@
                         <img src="assets/images/background-image-section2.jpg" alt="" class="about-hike__back-image">
                     </div>
                     <div class="about-hike__video__wrapper">
-                        <video src="assets/video/175357-853206077_small.mp4" :autoplay="!isTabletWidth" loop muted class="about-hike__video" ></video>
+                        <video src="assets/video/175357-853206077_small.mp4" :autoplay="!isTabletWidth" :controls="!isPcWidth" loop muted class="about-hike__video"></video>
                     </div>
                 </div>
                 <div class="about-hike__information">
@@ -203,20 +247,26 @@
                         Стоимость программ
                     </button>
                 </div>
-                <div class="best-programs__photos">
-                    <div class="best-programs__photo__wrapper">
-                        <img src="assets/images/2477527220820f7569fa7544d5287ff1.jpg" alt="" class="best-programs__photo">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/2477527220820f7569fa7544d5287ff1.jpg" alt="" class="best-programs__photo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/7564a42e25a2403fdc7819acba9bc9f0.jpg" alt="" class="best-programs__photo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/4047889565df87931dddd4b41e638af5.jpg" alt="" class="best-programs__photo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/b4fdc01696d52b09bfeecbcd3e2a83eb.jpg" alt="" class="best-programs__photo">
+                        </div>
                     </div>
-                    <div class="best-programs__photo__wrapper">
-                        <img src="assets/images/7564a42e25a2403fdc7819acba9bc9f0.jpg" alt="" class="best-programs__photo">
-                    </div>
-                    <div class="best-programs__photo__wrapper">
-                        <img src="assets/images/4047889565df87931dddd4b41e638af5.jpg" alt="" class="best-programs__photo">
-                    </div>
-                    <div class="best-programs__photo__wrapper">
-                        <img src="assets/images/b4fdc01696d52b09bfeecbcd3e2a83eb.jpg" alt="" class="best-programs__photo">
-                    </div>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
+            </div>
             </div>
         </section>
         <section class="best-destinations">
@@ -534,36 +584,7 @@
                 </div>
             </div>
         </footer>
-        <el-dialog v-if="isRendered" v-model="dialogFormVisible" title="Поиск программы" width="500">
-            <li class="introduction__item">
-                <v-select :options="tours" label="title" placeholder="Локация для тура"></v-select>
-                <span>
-                    Выберите из списка
-                </span>
-            </li>
-            <li class="introduction__item">
-                <div>
-                    <el-date-picker
-                    v-model="SelectedDate"
-                    type="date"
-                    placeholder="Укажите дату"
-                    class="introduction__date-picker"
-                    />
-                </div>
-                <span>
-                    Укажите дату
-                </span>
-            </li>
-            <li class="introduction__item">
-                <v-select :options="participants" label="title" placeholder="Участники"></v-select>
-                <span>
-                    Минимум 4 человека
-                </span>
-            </li>
-            <button class="primary-btn">
-                Найти
-            </button>
-        </el-dialog>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </body>
 </html>
