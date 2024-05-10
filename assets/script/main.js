@@ -103,6 +103,7 @@ const mediaQuery = window.matchMedia('(max-width: 767px)')
 function handleTabletChange(e) {
   if (e.matches) {
     var slider1 = new Swiper('.swiper', {
+      spaceBetween:20,
       navigation: {
          nextEl: '.swiper-button-next',
          prevEl: '.swiper-button-prev'

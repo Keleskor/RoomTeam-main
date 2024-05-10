@@ -1173,10 +1173,12 @@ background-color: var(--primary-color);
     }
     .swiper-wrapper {
         display: flex!important;
+        gap: 0px;
         flex-direction: row!important;
     }
     .best-programs__photo {
         border-radius: 50px!important;
         overflow: hidden!important;
+        aspect-ratio: 3/2;
     }
 }
