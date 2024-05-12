@@ -1181,4 +1181,75 @@ background-color: var(--primary-color);
         overflow: hidden!important;
         aspect-ratio: 3/2;
     }
+    .swiper-pagination {
+        display: flex!important;
+        gap: 20px!important;
+        justify-content: center!important;
+        bottom: var(--swiper-pagination-bottom, 30px)!important;
+    }
+    .swiper-pagination-bullet {
+        background-color: white!important;
+        opacity: 1!important;
+    }   
+    .swiper-pagination-bullet-active {
+        background-color: #1A3E3E!important;
+    }
+    .button__program-menu {
+        font-size: 14px;
+    }
+    .introduction__text {
+        font-size: 36px;
+    }
+    .about-hike__heading, .best-programs__heading, .best-destinations__heading, .photo-report__heading {
+        font-size: 16px;
+    }
+    .about-hike__subheading, .best-programs__subheading, .best-destinations__subheading, .photo-report__subheading {
+        font-size: 22px;
+    }
+    .about-hike__description, .best-programs__description {
+        font-size: 14px;
+    }
+    .best-destinations__under-information__heading {
+        font-size: 18px;
+    }
+    .best-destinations__under-information__subheading {
+        font-size: 12px;
+    }
+    .best-destinations__price {
+        font-size: 16px;
+    }
+    .newsletter__container {
+        flex-direction: column;
+        align-items: start;
+    }
+    .newsletter__form {
+        flex-wrap: wrap;
+    }
+    .footer__content {
+        padding: 100px 5vw;
+    }
+    .best-programs__description {
+        line-height: 20px;
+    }
+    .newsletter__content {
+        margin-top: 50px;
+    }
+    .footer__auntor-content {
+        flex-wrap: wrap;
+    }
+    .introduction__text {
+        font-size: calc(30px + (42  - 30) * (100vw - 380px) / (768 - 380));
+    }
+    .about-hike, .best-programs, .best-destinations {
+        padding: 50px 0;
+    }
+    .best-destinations__destination:nth-of-type(2){
+        display: none;
+    }
+    .best-destinations__destination {
+        max-width: fit-content;
+    }
+    .best-destinations__text {
+        max-width: fit-content;
+    }
 }
