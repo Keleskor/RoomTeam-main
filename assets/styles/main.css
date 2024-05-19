@@ -480,7 +480,7 @@ background-color: var(--primary-color);
     transition:var(--transitionTime);
     border: 1px solid var(--primary-color);
 }
-.swiper {
+.best-programs-swiper {
     margin-left: 0!important;
     margin-right: 0!important;
 }
@@ -712,19 +712,39 @@ background-color: var(--primary-color);
     flex-direction: column;
     gap: 20px;
 }
-.photo-report__photos__first-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 20px;
+.photo-report__photos__wrapper {
+    display: grid!important;
+    grid-template-columns: repeat(3,auto)!important;
+    grid-template-areas: 
+    "a a b c"
+    "d e e f"!important;
 }
-.photo-report__photos__second-row {
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    gap: 20px;
+.photo-report__wrapper-photo-one {
+    grid-area: a!important;
 }
-.photo-report__wrapper-photo {
-    max-width: 100%;
-    max-height: 250px;
+.photo-report__wrapper-photo-two {
+    grid-area: b!important;
+}
+.photo-report__wrapper-photo-three {
+    grid-area: c!important;
+}
+.photo-report__wrapper-photo-four {
+    grid-area: d!important;
+}
+.photo-report__wrapper-photo-five {
+    grid-area: e!important;
+}
+.photo-report__wrapper-photo-six {
+    grid-area: f!important;
+}
+.photo-report__wrapper-photo-one,
+ .photo-report__wrapper-photo-two,
+  .photo-report__wrapper-photo-three,
+    .photo-report__wrapper-photo-four,
+    .photo-report__wrapper-photo-five,
+    .photo-report__wrapper-photo-six {
+    max-width: 100%!important;
+    max-height: 250px!important;
 }
 .photo-report__photo {
     width: 100%;
@@ -1251,5 +1271,45 @@ background-color: var(--primary-color);
     }
     .best-destinations__text {
         max-width: fit-content;
+    }
+    .introduction__text__offline {
+        display: none;
+    }
+    .main-header__block__acitve{
+        width: 100%;
+        height: 100vh;
+        transition: none;
+    }
+    .main-header__block {
+        transition: none;
+    }
+    .main-header__nav {
+        width: 100%;
+        height: 100%;
+    }
+    .main-header__list {
+        padding-top: 50px;
+    }
+    .photo-report__photos__wrapper {
+        display: flex;
+    }
+    .photo-report__photo {
+        display: block;
+        width: 100%;
+        height: 250px;
+        object-fit: cover;
+    }
+    .photo-report__wrapper-photo-one,
+     .photo-report__wrapper-photo-two,
+      .photo-report__wrapper-photo-three,
+       .photo-report__wrapper-photo-four,
+        .photo-report__wrapper-photo-five,
+         .photo-report__wrapper-photo-six {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 }
