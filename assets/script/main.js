@@ -84,6 +84,7 @@ let button_program_menu = document.querySelector('.button__program-menu');
 let buttonClose_program_menu = document.querySelector('.introduction__block__close');
 let program_menu_modal = document.querySelector('.introduction__block');
 let introduction = document.querySelector('.introduction');
+let program_heading = document.querySelector('.introduction__text');
 
 button_program_menu.addEventListener("click",()=>{
   program_menu_modal.classList.add('introduction__block__active');
@@ -91,18 +92,20 @@ button_program_menu.addEventListener("click",()=>{
   introduction.style.zIndex = '2008';
   window.scrollTo(0,0);
   body.classList.add('overflow');
+  program_heading.classList.add('introduction__text__offline');
 })
 buttonClose_program_menu.addEventListener("click",()=>{
   program_menu_modal.classList.remove('introduction__block__active');
   block.classList.remove('block__active');
   introduction.style.zIndex = '2006';
   body.classList.remove('overflow');
+  program_heading.classList.remove('introduction__text__offline');
 })
 
 const mediaQuery = window.matchMedia('(max-width: 767px)')
 function handleTabletChange(e) {
   if (e.matches) {
-    var slider1 = new Swiper('.swiper', {
+    var slider1 = new Swiper('.best-programs-swiper', {
       spaceBetween:20,
       navigation: {
          nextEl: '.swiper-button-next',
@@ -110,6 +113,19 @@ function handleTabletChange(e) {
       },
       pagination: {
          el: '.swiper-pagination',
+         clickable: true,
+      },
+    });
+    var slider2 = new Swiper('.photo-report-swiper', {
+      slidesPreview: 1,
+      spaceBetween:20,
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+         el: '.swiper-pagination',
+         dynamicMainBullets:2,
          clickable: true,
       },
     });
