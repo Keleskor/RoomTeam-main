@@ -28,6 +28,9 @@ const app = createApp({
     }
   },
   methods: {
+    initSwiper(id,settings){
+      const slider = new Swiper(`#${id}`,{...settings});
+    }
   },
   computed:{
     isHeaderDowned(){
@@ -36,6 +39,9 @@ const app = createApp({
     isTabletWidth(){
       return this.currentWidth<=1024;
     },
+    isSmallTabletWidth(){
+      return this.currentWidth<=768;
+    },
     isPcWidth(){
       return this.currentWidth>=1025;
     },
@@ -43,10 +49,26 @@ const app = createApp({
       return this.rendered;
     }
   },
+  watch:{
+  },
   mounted() {
     document.addEventListener('scroll',()=>this.currentPosition = document.documentElement.scrollTop);
     window.addEventListener('resize',()=>this.currentWidth = document.documentElement.clientWidth);
     rendered = true;
+
+    this.initSwiper('photo-report-swiper',{
+      slidesPreview: 1,
+      spaceBetween:20,
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+         el: '.swiper-pagination',
+         dynamicMainBullets:2,
+         clickable: true,
+      },
+    });
   },
 
 })
@@ -116,19 +138,19 @@ function handleTabletChange(e) {
          clickable: true,
       },
     });
-    var slider2 = new Swiper('.photo-report-swiper', {
-      slidesPreview: 1,
-      spaceBetween:20,
-      navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev'
-      },
-      pagination: {
-         el: '.swiper-pagination',
-         dynamicMainBullets:2,
-         clickable: true,
-      },
-    });
+    // var slider2 = new Swiper('.photo-report-swiper', {
+    //   slidesPreview: 1,
+    //   spaceBetween:20,
+    //   navigation: {
+    //      nextEl: '.swiper-button-next',
+    //      prevEl: '.swiper-button-prev'
+    //   },
+    //   pagination: {
+    //      el: '.swiper-pagination',
+    //      dynamicMainBullets:2,
+    //      clickable: true,
+    //   },
+    // });
   }
 }
 mediaQuery.addListener(handleTabletChange)

@@ -719,6 +719,9 @@ background-color: var(--primary-color);
     "a a b c"
     "d e e f"!important;
 }
+.photo-report-swiper{
+    width: 100%;
+}
 .photo-report__wrapper-photo-one {
     grid-area: a!important;
 }
