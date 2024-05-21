@@ -69,6 +69,19 @@ const app = createApp({
          clickable: true,
       },
     });
+    this.initSwiper('best-programs-swiper',{
+      slidesPreview: 1,
+      spaceBetween:20,
+      navigation: {
+         nextEl: '.swiper-button-next',
+         prevEl: '.swiper-button-prev'
+      },
+      pagination: {
+         el: '.swiper-pagination',
+         dynamicMainBullets:2,
+         clickable: true,
+      },
+    });
   },
 
 })
@@ -124,35 +137,4 @@ buttonClose_program_menu.addEventListener("click",()=>{
   program_heading.classList.remove('introduction__text__offline');
 })
 
-const mediaQuery = window.matchMedia('(max-width: 767px)')
-function handleTabletChange(e) {
-  if (e.matches) {
-    var slider1 = new Swiper('.best-programs-swiper', {
-      spaceBetween:20,
-      navigation: {
-         nextEl: '.swiper-button-next',
-         prevEl: '.swiper-button-prev'
-      },
-      pagination: {
-         el: '.swiper-pagination',
-         clickable: true,
-      },
-    });
-    // var slider2 = new Swiper('.photo-report-swiper', {
-    //   slidesPreview: 1,
-    //   spaceBetween:20,
-    //   navigation: {
-    //      nextEl: '.swiper-button-next',
-    //      prevEl: '.swiper-button-prev'
-    //   },
-    //   pagination: {
-    //      el: '.swiper-pagination',
-    //      dynamicMainBullets:2,
-    //      clickable: true,
-    //   },
-    // });
-  }
-}
-mediaQuery.addListener(handleTabletChange)
-handleTabletChange(mediaQuery)
 /*****************************************programm menu modal END*****************************************/
