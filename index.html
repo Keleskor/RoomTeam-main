@@ -247,7 +247,23 @@
                         Стоимость программ
                     </button>
                 </div>
-                <div class="best-programs-swiper swiper">
+                <div class="best-programs-swiper" v-show="!isSmallTabletWidth">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="assets/images/2477527220820f7569fa7544d5287ff1.jpg" alt="" class="best-programs__photo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/7564a42e25a2403fdc7819acba9bc9f0.jpg" alt="" class="best-programs__photo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/4047889565df87931dddd4b41e638af5.jpg" alt="" class="best-programs__photo">
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="assets/images/b4fdc01696d52b09bfeecbcd3e2a83eb.jpg" alt="" class="best-programs__photo">
+                        </div>
+                    </div>
+                </div>
+                <div id="best-programs-swiper" class="best-programs-swiper swiper" v-show="isSmallTabletWidth">
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <img src="assets/images/2477527220820f7569fa7544d5287ff1.jpg" alt="" class="best-programs__photo">
@@ -381,27 +397,31 @@
                 </div>
                 <div class="photo-report-swiper" v-show="!isSmallTabletWidth">
                     <div class="photo-report__photos__wrapper swiper-wrapper">
-                        <div class="photo-report__wrapper-photo-one swiper-slide">
-                            <img src="assets/images/25651685e316ac9a59c0aa07a74285b4.jpg" alt="" class="photo-report__photo">
+                        <div class="photo-report__first-teamplate">
+                            <div class="photo-report__wrapper-photo-one swiper-slide">
+                                <img src="assets/images/25651685e316ac9a59c0aa07a74285b4.jpg" alt="" class="photo-report__photo">
+                            </div>
+                            <div class="photo-report__wrapper-photo-two swiper-slide">
+                                <img src="assets/images/1c6a5cc9e2817042d877a0e18c760098.jpg" alt="" class="photo-report__photo">
+                            </div>
+                            <div class="photo-report__wrapper-photo-three swiper-slide">
+                                <img src="assets/images/5bd0188c6d0331440b81fa037df7b935.jpg" alt="" class="photo-report__photo">
+                            </div>
                         </div>
-                        <div class="photo-report__wrapper-photo-two swiper-slide">
-                            <img src="assets/images/1c6a5cc9e2817042d877a0e18c760098.jpg" alt="" class="photo-report__photo">
-                        </div>
-                        <div class="photo-report__wrapper-photo-three swiper-slide">
-                            <img src="assets/images/5bd0188c6d0331440b81fa037df7b935.jpg" alt="" class="photo-report__photo">
-                        </div>
-                        <div class="photo-report__wrapper-photo-four swiper-slide">
-                            <img src="assets/images/59e7327547e4fecc840e2312bdffde8b.jpg" alt="" class="photo-report__photo">
-                        </div>
-                        <div class="photo-report__wrapper-photo-five swiper-slide">
-                            <img src="assets/images/1756e88a24adc420ec28b03f18923451.jpg" alt="" class="photo-report__photo">
-                        </div>
-                        <div class="photo-report__wrapper-photo-six swiper-slide">
-                            <img src="assets/images/11379eff076d90a786170fd2e331c0e5.jpg" alt="" class="photo-report__photo">
+                        <div class="photo-report__second-teamplate">
+                            <div class="photo-report__wrapper-photo-four swiper-slide">
+                                <img src="assets/images/59e7327547e4fecc840e2312bdffde8b.jpg" alt="" class="photo-report__photo">
+                            </div>
+                            <div class="photo-report__wrapper-photo-five swiper-slide">
+                                <img src="assets/images/1756e88a24adc420ec28b03f18923451.jpg" alt="" class="photo-report__photo">
+                            </div>
+                            <div class="photo-report__wrapper-photo-six swiper-slide">
+                                <img src="assets/images/11379eff076d90a786170fd2e331c0e5.jpg" alt="" class="photo-report__photo">
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div id="photo-report-swiper" class="photo-report-swiper" v-show="isSmallTabletWidth">
+                <div id="photo-report-swiper" class="photo-report-swiper swiper" v-show="isSmallTabletWidth">
                     <div class="photo-report__photos__wrapper swiper-wrapper">
                         <div class="photo-report__wrapper-photo-one swiper-slide">
                             <img src="assets/images/25651685e316ac9a59c0aa07a74285b4.jpg" alt="" class="photo-report__photo">
