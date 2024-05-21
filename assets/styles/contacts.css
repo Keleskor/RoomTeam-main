@@ -1,0 +1,95 @@
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+.main {
+   padding: 150px 0;
+}
+.main-container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.content {
+   max-width: calc(1200px + 20vw);
+   width: 100%;
+   padding: 0 10vw;
+   margin: 0 auto;
+}
+.main-header {
+   background-color: var(--primary-color);
+}
+.main-header__btn {
+   border: 2px solid white;
+}
+.hotline, .main-office, .address {
+   display: inline-flex;
+   flex-direction: column;
+   gap: 20px;
+   padding: 20px 20px 20px 0;
+   border-bottom: 1px solid var(--primary-color);
+}
+.heading {
+   font-size: 48px;
+   font-family: Nunito;
+   font-weight: 600;
+   padding-bottom: 100px;
+}
+.information {
+   display: inline-flex;
+   flex-direction: column;
+   gap: 30px;
+}
+.hotline__heading, .hotline__visiting-time, .main-office__heading, .address__heading {
+   font-size: 16px;
+   font-family: Nunito;
+   font-weight: 400;
+}
+.hotline__socials-link {
+   width: 22px;
+   height: 22px;
+   background-color: var(--primary-color);
+   border-radius: 50%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.telephone-icon {
+   width: 22px;
+   height: 22px;
+}
+.watch-icon {
+   width: 16px;
+   height: 17px;
+}
+.hotline__content, .main-office__heading-wrapper, .address__heading-wrapper {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+.hotline__time, .main-office__time {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+}
+.hotline__socials-links {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+.hotline__number, .main-office__number {
+   font-size: 32px;
+   font-family: Nunito;
+   font-weight: 500;
+}
+.hotline__additional-information {
+   display: flex;
+   align-items: center;
+   gap: 20px;
+}
+.address__text {
+   font-size: 18px;
+   font-family: Nunito;
+   font-weight: 400;
+}
