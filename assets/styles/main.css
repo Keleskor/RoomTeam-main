@@ -1310,6 +1310,7 @@ background-color: var(--primary-color);
     }
     .introduction__video-wrapper {
         padding-bottom: 120px;
+        height: 815px;
     }
     .introduction__content {
         gap: 60px;
