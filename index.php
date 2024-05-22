@@ -74,9 +74,11 @@
                     <p class="about-hike__description">
                         Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
                     </p>
-                    <button class="about-hike__button">
-                        Программа тура
-                    </button>
+                    <a href="/tourProgram.php" class="about-hike__button-link">
+                        <button class="about-hike__button">
+                            Программа тура
+                        </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -135,9 +137,11 @@
                             </div>
                         </div>
                     </div>
-                    <button class="best-programs__button">
-                        Стоимость программ
-                    </button>
+                    <a href="/price.php" class="best-programs__button-link">
+                        <button class="best-programs__button">
+                            Стоимость программ
+                        </button>
+                    </a>
                 </div>
                 <div class="best-programs-swiper" v-show="!isSmallTabletWidth">
                     <div class="swiper-wrapper">
@@ -209,9 +213,11 @@
                                 <p class="best-destinations__text">
                                     Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
                                 </p>
-                                <button class="best-destinations__additional-information-button">
-                                    Программа тура
-                                </button>
+                                <a href="/tourProgram.php">
+                                    <button class="best-destinations__additional-information-button">
+                                        Программа тура
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -237,9 +243,11 @@
                                 <p class="best-destinations__text">
                                     Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
                                 </p>
-                                <button class="best-destinations__additional-information-button">
-                                    Программа тура
-                                </button>
+                                <a href="/tourProgram.php">
+                                    <button class="best-destinations__additional-information-button">
+                                        Программа тура
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -265,9 +273,11 @@
                                 <p class="best-destinations__text">
                                     Его корни уходят в один фрагмент классической латыни 45 года н.э., то есть более двух тысячелетий назад. Ричард МакКлинток, профессор латыни из колледжа Hampden-Sydney, штат Вирджиния, взял одно из самых странных слов в Lorem Ipsum, "consectetur"и занялся его поисками в классической латинской литературе.
                                 </p>
-                                <button class="best-destinations__additional-information-button">
-                                    Программа тура
-                                </button>
+                                <a href="/tourProgram.php">
+                                    <button class="best-destinations__additional-information-button">
+                                        Программа тура
+                                    </button>
+                                </a>
                             </div>
                         </div>
                     </div>
