@@ -97,13 +97,22 @@ let main_header_block = document.querySelector('.main-header__block');
 let main_header = document.querySelector('.main-header');
 let body = document.querySelector('body');
 let block = document.querySelector('.block');
+let button_program_menu = document.querySelector('.button__program-menu');
+let buttonClose_program_menu = document.querySelector('.introduction__block__close');
+let program_menu_modal = document.querySelector('.introduction__block');
+let introduction = document.querySelector('.introduction');
+let program_heading = document.querySelector('.introduction__text');
 
 button_burger_menu.addEventListener("click",()=>{
-  program_menu_modal.classList.remove('introduction__block__active');
+  if(document.querySelector('.introduction__block')){
+    program_menu_modal.classList.remove('introduction__block__active');
+  }
   main_header_block.classList.add('main-header__block__acitve');
   block.classList.add('block__active');
   body.classList.add('overflow');
-  introduction.style.zIndex = '2006';
+  if(document.querySelector('.introduction')){
+    introduction.style.zIndex = '2006';
+  }
 })
 buttonClose_burger_menu.addEventListener("click",()=>{
   main_header_block.classList.remove('main-header__block__acitve');
@@ -115,26 +124,25 @@ buttonClose_burger_menu.addEventListener("click",()=>{
 
 /*****************************************programm menu modal START****************************************/
 
-let button_program_menu = document.querySelector('.button__program-menu');
-let buttonClose_program_menu = document.querySelector('.introduction__block__close');
-let program_menu_modal = document.querySelector('.introduction__block');
-let introduction = document.querySelector('.introduction');
-let program_heading = document.querySelector('.introduction__text');
 
-button_program_menu.addEventListener("click",()=>{
-  program_menu_modal.classList.add('introduction__block__active');
-  block.classList.add('block__active');
-  introduction.style.zIndex = '2008';
-  window.scrollTo(0,0);
-  body.classList.add('overflow');
-  program_heading.classList.add('introduction__text__offline');
-})
-buttonClose_program_menu.addEventListener("click",()=>{
-  program_menu_modal.classList.remove('introduction__block__active');
-  block.classList.remove('block__active');
-  introduction.style.zIndex = '2006';
-  body.classList.remove('overflow');
-  program_heading.classList.remove('introduction__text__offline');
-})
+if(document.querySelector('.button__program-menu')){
+  button_program_menu.addEventListener("click",()=>{
+    program_menu_modal.classList.add('introduction__block__active');
+    block.classList.add('block__active');
+    introduction.style.zIndex = '2008';
+    window.scrollTo(0,0);
+    body.classList.add('overflow');
+    program_heading.classList.add('introduction__text__offline');
+  })
+}
+if(document.querySelector('.introduction__block__close')){
+  buttonClose_program_menu.addEventListener("click",()=>{
+    program_menu_modal.classList.remove('introduction__block__active');
+    block.classList.remove('block__active');
+    introduction.style.zIndex = '2006';
+    body.classList.remove('overflow');
+    program_heading.classList.remove('introduction__text__offline');
+  })
+}
 
 /*****************************************programm menu modal END*****************************************/
