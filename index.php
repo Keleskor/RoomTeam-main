@@ -43,7 +43,9 @@
                                     </span>
                                 </li>
                             </ul>
-                            <button class="introduction__btn secondary-btn" @click="dialogFormVisible=true">Найти программу</button>
+                            <a href="mainProgram.php" class="mainProgram-link">
+                                <button class="introduction__btn secondary-btn" @click="dialogFormVisible=true">Найти программу</button>
+                            </a>
                         </div>
                         <button class="button__program-menu">
                             Меню программ
