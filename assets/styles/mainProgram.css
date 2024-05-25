@@ -1,0 +1,102 @@
+.mainProgram-main {
+   padding: 150px 0;
+}
+.mainProgram__content {
+   max-width: calc(1200px + 20vw);
+   width: 100%;
+   padding: 0 10vw;
+   margin: 0 auto;
+}
+.main-header {
+   background-color: var(--primary-color);
+}
+.main-header__btn {
+   border: 2px solid white;
+}
+.mainProgram__program {
+   display: flex;
+   flex-direction: column;
+   gap: 40px;
+}
+.mainProgram__body {
+   display: flex;
+   justify-content: space-between;
+   gap: 50px;
+}
+.mainProgram__image__wrapper {
+   max-width: 800px;
+}
+.mainProgram__image {
+   width: 100%;
+   border-radius: 6px;
+   object-fit: cover;
+}
+.mainProgram__information__wrapper {
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   gap: 20px;
+}
+.mainProgram__brief-information {
+   padding-bottom: 20px;
+   border-bottom: 1px solid var(--primary-color);
+}
+.mainProgram__information {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+}
+.mainProgram__heading {
+   font-size: 48px;
+   font-weight: 400;
+}
+.mainProgram__name-tour__wrapper, .mainProgram__date__wrapper, .mainProgram__participants__wrapper {
+   font-size: 20px;
+}
+.brief-information__text {
+   width: 400px;
+   font-size: 18px;
+}
+.mainProgram__buy {
+   border-radius: 4px;
+   background-color: var(--primary-color);
+
+   padding: 12px 24px;
+   width: 213px;
+
+   color: white;
+   cursor: pointer;
+   font-size: 16px;
+
+   border: 2px solid var(--primary-color);
+
+   transition:var(--transitionTime);
+}
+
+.mainProgram__buy:hover {
+   background-color: white;
+   color: var(--primary-color);
+   border: 2px solid var(--primary-color);
+}
+@media(max-width:1365px){
+   .mainProgram__body {
+      flex-direction: column;
+      justify-content: center;
+   }
+   .brief-information__text {
+      width: 100%;
+   }
+}
+@media(max-width:1023px){
+   .heading {
+      font-size: 36px;
+   }
+   .brief-information__text {
+      font-size: 16px;
+   }
+}
+@media(max-width:767px){
+   .mainProgram__content {
+      padding: 0 5vw 100px 5vw;
+   }
+}

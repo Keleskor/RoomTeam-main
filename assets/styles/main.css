@@ -150,6 +150,11 @@ background-color: var(--primary-color);
     align-items: flex-end;
     padding-bottom: 82px;
 }
+.mainProgram-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .introduction__video{
     position: absolute;
 
