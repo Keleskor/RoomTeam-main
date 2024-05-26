@@ -18,7 +18,7 @@
                             </span>
                             <ul class="introduction__list">
                                 <li class="introduction__item">
-                                    <v-select :options="tours" label="title" placeholder="Локация для тура"></v-select>
+                                    <v-select :options="tours" label="title" v-model="tour.location" placeholder="Локация для тура"></v-select>
                                     <span>
                                         Выберите из списка
                                     </span>
@@ -26,7 +26,7 @@
                                 <li class="introduction__item">
                                     <div>
                                         <el-date-picker
-                                        v-model="SelectedDate"
+                                        v-model="tour.Date"
                                         type="date"
                                         placeholder="Укажите дату"
                                         class="introduction__date-picker"
@@ -37,15 +37,13 @@
                                     </span>
                                 </li>
                                 <li class="introduction__item">
-                                    <v-select :options="participants" label="title" placeholder="Участники"></v-select>
+                                    <v-select :options="participants" v-model="tour.total_users" label="title" placeholder="Участники"></v-select>
                                     <span>
                                         Минимум 4 человека
                                     </span>
                                 </li>
-                            </ul>
-                            <a href="mainProgram.php" class="mainProgram-link">
-                                <button class="introduction__btn secondary-btn" @click="dialogFormVisible=true">Найти программу</button>
-                            </a>
+                            </ul>                           
+                                <button class="introduction__btn secondary-btn" @click="FindATour">Найти программу</button>
                         </div>
                         <button class="button__program-menu">
                             Меню программ

@@ -1,5 +1,14 @@
 <?php
-    require "assets/connect/header.html";
+if (!isset($_GET['id'])) {
+   header('Location: http://roomteam-main/', true, 301);
+   exit();
+}
+require_once($_SERVER["DOCUMENT_ROOT"] . '/backend/API/tours/get.php');
+if (!$TOUR) {
+   header('Location: http://roomteam-main/', true, 301);
+   exit();
+}
+require "assets/connect/header.html";
 ?>
 <link rel="stylesheet" href="assets/styles/mainProgram.css">
 <link rel="stylesheet" href="assets/styles/mainProgram-min.css">
@@ -7,39 +16,39 @@
    <div class="mainProgram__content">
       <div class="mainProgram__program">
          <h2 class="mainProgram__heading">
-            Закопане (Польша)
+            <?=$TOUR['location']?>
          </h2>
          <div class="mainProgram__body">
             <div class="mainProgram__image__wrapper">
-               <img src="assets/images/1650914163_64-vsegda-pomnim-com-p-tatri-gori-foto-79.jpg" alt="" class="mainProgram__image">
+               <img src="<?=$TOUR['img_src']?>" alt="" class="mainProgram__image">
             </div>
             <div class="mainProgram__information__wrapper">
                <div class="mainProgram__brief-information">
                   <p class="brief-information__text">
-                     Закопане — это небольшой город в южной Польше, расположенный у подножия Татр. Известен как центр зимних видов спорта и туризма, привлекая лыжников и сноубордистов. Летом Закопане предлагает пешие походы, альпинизм и красивые пейзажи. Город также славится своей традиционной деревянной архитектурой и богатой культурой горцев (горцев).
+                  <?=$TOUR['description']?>
                   </p>
                </div>
                <div class="mainProgram__information">
                   <p class="mainProgram__name-tour__wrapper">
-                     Название тура: 
+                     Название тура:
                      <span class="mainProgram__name-tour">
-                        Закопане (Польша)
+                        <?=$TOUR['title']?>
                      </span>
                   </p>
                   <p class="mainProgram__date__wrapper">
-                     Дата отправки: 
+                     Дата отправки:
                      <span class="mainProgram__date">
-                        26.05.2024
+                     <?=$TOUR['date']?>
                      </span>
                   </p>
                   <p class="mainProgram__participants__wrapper">
-                     Количество участников: 
+                     Количество участников:
                      <span class="mainProgram__participants">
-                        6
+                     <?=$TOUR['total_users']?>
                      </span>
                   </p>
                   <button class="mainProgram__buy">
-                     В путь!
+                        <?=$TOUR['price']?>$
                   </button>
                </div>
             </div>
@@ -48,5 +57,5 @@
    </div>
 </section>
 <?php
-    require "assets/connect/footer.html";
+require "assets/connect/footer.html";
 ?>

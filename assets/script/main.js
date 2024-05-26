@@ -5,7 +5,6 @@ const app = createApp({
   },
   data() {
     return {
-      SelectedDate:null,
       tours: [
         { title: "Закопане (Польша)" },
         { title: "Дурмитор (Черногория)" },
@@ -25,11 +24,37 @@ const app = createApp({
       dialogFormVisible:false,
       rendered:false,
       currentWidth:document.documentElement.clientWidth,
+      tour:{
+        Date:null,
+        location:null,
+        total_users:null
+      }
     }
   },
   methods: {
     initSwiper(id,settings){
       const slider = new Swiper(`#${id}`,{...settings});
+    },
+    async FindATour(){
+      moment().locale('ru');
+      if(!this.tour.Date || !this.tour.location || !this.tour.total_users){
+        alert('Вы заполнили не все данные')
+        return
+      }
+
+      const {data} = await axios('/backend/API/tours/FindATour/get.php',{params:{
+        location:this.tour.location.title,
+        min_users:this.tour.total_users.title.split('-')[0],
+        max_users:this.tour.total_users.title.split('-')[1],
+        date:moment(this.tour.Date).format('DD.MM.YYYY')
+      }});
+      if(data){
+        window.location.href = `http://roomteam-main/mainProgram.php?id=${data.id}`
+      }
+      else{
+        alert('Подходящие туры не найдены')
+        return
+      }
     }
   },
   computed:{
