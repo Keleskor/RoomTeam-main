@@ -49,7 +49,7 @@ const app = createApp({
         date:moment(this.tour.Date).format('DD.MM.YYYY')
       }});
       if(data){
-        window.location.href = `http://roomteam-main/mainProgram.php?id=${data.id}`
+        window.location.href = `${window.location.href}mainProgram.php?id=${data.id}`
       }
       else{
         alert('Подходящие туры не найдены')
