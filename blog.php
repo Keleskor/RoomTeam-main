@@ -3,40 +3,137 @@
 ?>
 <link rel="stylesheet" href="assets/styles/blog.css">
 <section class="main-blog">
-    <div class="blog__content">
+    <div class="container blog__content">
         <h1 class="heading">
             Блог
         </h1>
         <div class="blog">
-            <h2 class="blog__heading">
-                Польза путешествий
-            </h2>
-            <div class="blog-image__wrapper">
-                <img src="assets/images/928b4031e5e6ce5e.webp" alt="" class="blog-image">
+            <div class="blog__card">
+                <div class="wrapper__blog-image">
+                    <img src="assets/images/izobrazhenie_2025-04-14_194135588-768x490.png" alt="" class="blog-image">
+                </div>
+                <div class="blog__information">
+                    <h3 class="blog__heading">
+                        <a href="" class="blog__link">
+                            Топ отелей 5* в Фуджейре, ОАЭ
+                        </a>
+                    </h3>
+                    <span class="blog__time">
+                        Время чтения: 4 минуты
+                    </span>
+                    <p class="blog__description">
+                        Фуджейра – это не просто еще один эмират с отелями ...
+                    </p>
+                    <a href="" class="blog__more">
+                        Читать далее →  
+                    </a>
+                </div>
             </div>
-            <p class="blog-text">
-                Путешествия играют важную роль в жизни человека, принося множество преимуществ как на физическом, так и на эмоциональном уровне. Вот несколько ключевых аспектов, почему путешествия полезны:
-            </p>
-            <ul class="blog-list">
-                <li class="blog-aspect">
-                    Путешествия позволяют познакомиться с разными культурами, традициями и обычаями. Они помогают увидеть мир с другой точки зрения, что способствует развитию терпимости и понимания разнообразия.
-                </li>
-                <li class="blog-aspect">
-                    Исследования показывают, что путешествия снижают уровень стресса и улучшают настроение. Они способствуют снятию эмоционального напряжения и дают возможность расслабиться, отдохнуть от рутины и повседневных забот.
-                </li>
-                <li class="blog-aspect">
-                    Путешествия часто связаны с активными видами деятельности, такими как пешие прогулки, плавание или катание на велосипеде. Это помогает поддерживать физическую форму и улучшает общее состояние здоровья.
-                </li>
-                <li class="blog-aspect">
-                    Новые впечатления и обстановка стимулируют мозг к созданию новых идей и решений. Путешествия развивают творческое мышление и способность к адаптации в различных ситуациях.
-                </li>
-                <li class="blog-aspect">
-                    Каждое путешествие — это урок истории, географии и социологии. Вы узнаете о культурных памятниках, исторических событиях и природных явлениях, что способствует обогащению знаний и личностному росту.
-                </li>
-                <li class="blog-aspect">
-                    Путешествия с семьей или друзьями укрепляют отношения и создают общие воспоминания. Также они способствуют знакомству с новыми людьми, что расширяет социальные связи и открывает новые возможности для общения и сотрудничества.
-                </li>
-            </ul>
+            <div class="blog__card">
+                <div class="wrapper__blog-image">
+                    <img src="assets/images/gl-1-768x512.jpg" alt="" class="blog-image">
+                </div>
+                <div class="blog__information">
+                    <h3 class="blog__heading">
+                        <a href="" class="blog__link">
+                            Районы Паттайи – какой выбрать для отдыха?
+                        </a>
+                    </h3>
+                    <span class="blog__time">
+                        Время чтения: 3 минуты
+                    </span>
+                    <p class="blog__description">
+                        Паттайя – город контрастов, где шумные вечеринки соседствуют с тихими ...
+                    </p>
+                    <a href="" class="blog__more">
+                        Читать далее →  
+                    </a>
+                </div>
+            </div>
+            <div class="blog__card">
+                <div class="wrapper__blog-image">
+                    <img src="assets/images/4-Egipet-SHarm-El-SHejh-768x509.jpg" alt="" class="blog-image">
+                </div>
+                <div class="blog__information">
+                    <h3 class="blog__heading">
+                        <a href="" class="blog__link">
+                            Лучшие отели 4* в Шарм-эль-Шейхе
+                        </a>
+                    </h3>
+                    <span class="blog__time">
+                        Время чтения: 4 минуты
+                    </span>
+                    <p class="blog__description">
+                        Планируете отпуск в Египте и ищете идеальный отель с хорошим ...
+                    </p>
+                    <a href="" class="blog__more">
+                        Читать далее →  
+                    </a>
+                </div>
+            </div>
+            <div class="blog__card">
+                <div class="wrapper__blog-image">
+                    <img src="assets/images/gl-768x512.jpg" alt="" class="blog-image">
+                </div>
+                <div class="blog__information">
+                    <h3 class="blog__heading">
+                        <a href="" class="blog__link">
+                            Что посмотреть в Узбекистане?
+                        </a>
+                    </h3>
+                    <span class="blog__time">
+                        Время чтения: 4 минуты
+                    </span>
+                    <p class="blog__description">
+                        Узбекистан — это страна, где смешались древние цивилизации, Великий Шелковый ...
+                    </p>
+                    <a href="" class="blog__more">
+                        Читать далее →  
+                    </a>
+                </div>
+            </div>
+            <div class="blog__card">
+                <div class="wrapper__blog-image">
+                    <img src="assets/images/3-Naithonburi-Beach-Resort-768x543.jpg" alt="" class="blog-image">
+                </div>
+                <div class="blog__information">
+                    <h3 class="blog__heading">
+                        <a href="" class="blog__link">
+                            7 отличных отелей 4* в Таиланде
+                        </a>
+                    </h3>
+                    <span class="blog__time">
+                        Время чтения: 5 минут
+                    </span>
+                    <p class="blog__description">
+                        Таиланд манит туристов не только пресловутой экзотикой, но и отличными ...
+                    </p>
+                    <a href="" class="blog__more">
+                        Читать далее →  
+                    </a>
+                </div>
+            </div>
+            <div class="blog__card">
+                <div class="wrapper__blog-image">
+                    <img src="assets/images/Kazan-768x510.jpg" alt="" class="blog-image">
+                </div>
+                <div class="blog__information">
+                    <h3 class="blog__heading">
+                        <a href="" class="blog__link">
+                            Куда поехать на 2-3 дня из Москвы?
+                        </a>
+                    </h3>
+                    <span class="blog__time">
+                        Время чтения: 4 минуты
+                    </span>
+                    <p class="blog__description">
+                        Если хочется сменить обстановку, но нет времени на долгий отпуск ...
+                    </p>
+                    <a href="" class="blog__more">
+                        Читать далее →  
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </section>
