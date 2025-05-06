@@ -1,6 +1,7 @@
 <?
 error_reporting(E_ERROR | E_PARSE);
 $host = '127.0.0.1';
+// $host = 'MySQL-8.0
 $db = 'Roomteam';
 $user = 'root';
 $pass = '';
