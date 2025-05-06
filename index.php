@@ -353,6 +353,97 @@
                 </button>
             </div>
         </section>
+        <section class="prompt-modal">
+            <div class="prompt-modal__content">
+                <div class="prompt-modal__header">
+                    <h2 class="prompt-modal__heading">
+                        Ближайшие туры
+                    </h2>
+                    <span class="prompt-modal__close">
+                        ✕ 
+                    </span>
+                </div>
+                <div class="prompt-modal__table">
+                    <div class="prompt-modal__table-location">
+                        <h3 class="table-location">
+                            Локация
+                        </h3>
+                        <h3 class="table-location">
+                            Закопане (Польша)
+                        </h3>
+                        <h3 class="table-location">
+                            Дурмитор (Черногория)
+                        </h3>
+                        <h3 class="table-location">
+                            Гудаури (Грузия)
+                        </h3>
+                        <h3 class="table-location">
+                            Чимбулак (Казахстан)
+                        </h3>
+                        <h3 class="table-location">
+                            Улудаг (Турция)
+                        </h3>
+                        <h3 class="table-location">
+                            Венген (Швейцария)
+                        </h3>
+                    </div>
+                    <span class="prompt-modal__separator">
+                    </span>
+                    <div class="prompt-modal__table-date">
+                        <h3 class="table-date">
+                            Дата
+                        </h3>
+                        <h3 class="table-date">
+                            10.05.2025
+                        </h3>
+                        <h3 class="table-date">                	
+                            15.05.2025
+                        </h3>
+                        <h3 class="table-date">
+                            25.05.2025
+                        </h3>
+                        <h3 class="table-date">
+                            03.06.2025
+                        </h3>
+                        <h3 class="table-date">
+                            10.06.2025
+                        </h3>
+                        <h3 class="table-date">
+                            20.06.2025
+                        </h3>
+                    </div>
+                    <span class="prompt-modal__separator">
+                    </span>
+                    <div class="prompt-modal__table-participants">
+                        <h3 class="table-participants">
+                            Кол-во участников:
+                        </h3>
+                        <h3 class="table-participants__mob">
+                            Участники
+                        </h3>
+                        <h3 class="table-participants">
+                            6
+                        </h3>
+                        <h3 class="table-participants">
+                            4
+                        </h3>
+                        <h3 class="table-participants">
+                            10
+                        </h3>
+                        <h3 class="table-participants">
+                            8
+                        </h3>
+                        <h3 class="table-participants">
+                            10
+                        </h3>
+                        <h3 class="table-participants">
+                            6
+                        </h3>
+                    </div>
+                </div>
+            </div>
+
+        </section>
 <?php
     require "assets/connect/footer.html";
 ?>
