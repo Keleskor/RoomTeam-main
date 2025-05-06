@@ -1,7 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
     const body = document.querySelector('body');
     const modal_buy = document.querySelector('.wrappper__hotel-main__modal-buy');
-    const modal_button = document.querySelector('.mainProgram__buy');
+    const modal_button = document.querySelector('.hotel-main__price-button');
     const modal_close = document.querySelector('.hotel-main__modal-close');
 
     modal_button.addEventListener('click',()=>{
