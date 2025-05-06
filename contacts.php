@@ -17,13 +17,13 @@
                   </h5>
                </div>
                <h2 class="hotline__number">
-                  8 800 222 81 01
+                  +7 (777) 777 77 77
                </h2>
                <div class="hotline__additional-information">
                   <div class="hotline__time">
                      <img src="assets/images/free-icon-three-o-clock-clock-13435.png" alt="" class="watch-icon">
                      <p class="hotline__visiting-time">
-                        с 10:00 до 19:00
+                        с 8:30 до 18:30
                      </p>
                   </div>
                   <div class="hotline__socials-links">
@@ -54,12 +54,12 @@
                   </h5>
                </div>
                <h2 class="main-office__number">
-                  8 927 778 80 63
+                  +7 (777) 777 77 77
                </h2>
                <div class="main-office__time">
                   <img src="assets/images/free-icon-three-o-clock-clock-13435.png" alt="" class="watch-icon">
                   <p class="main-office__visiting-time">
-                     с 10:00 до 19:00
+                     с 8:30 до 18:30
                   </p>
                </div>
             </div>
@@ -71,8 +71,8 @@
                   </h5>
                </div>
                <p class="address__text">
-                  г. Кузнецк, Пензенская область, <br>
-                   Московское шоссе 19г, 442530
+                  г. Алматы, Алматинская область, <br>
+                  ул. Тимирязева, 42
                </p>
             </div>
          </div>
