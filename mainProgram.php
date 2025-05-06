@@ -48,7 +48,7 @@ require "assets/connect/header.html";
                      </span>
                   </p>
                   <button class="mainProgram__buy">
-                        <?=$TOUR['price']?>$
+                        <?=$TOUR['price']?> ₸
                   </button>
                </div>
             </div>
@@ -56,6 +56,25 @@ require "assets/connect/header.html";
       </div>
    </div>
 </section>
+<div class="wrappper__hotel-main__modal-buy">
+  <div class="hotel-main__modal-buy">
+    <form action="/hotels.php" class="hotel-main__buy" method="get">
+      <label class="hotel-main__buy-heading">
+        Заполните поля
+      </label>
+      <input type="text" class="hotel-main__buy-element" placeholder="Введите имя: ">
+      <input type="text" class="hotel-main__buy-element" placeholder="Введите фамилию: ">
+      <input type="text" class="hotel-main__buy-element" placeholder="Ваш номер телефона: ">
+      <input type="text" class="hotel-main__buy-element" placeholder="Ваш email: ">
+      <button class="submit">
+        Отправить
+      </button>
+    </form>
+    <span class="hotel-main__modal-close">
+      ✕
+    </span>
+  </div>
+</div>
 <?php
 require "assets/connect/footer.html";
 ?>
